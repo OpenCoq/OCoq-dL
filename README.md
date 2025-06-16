@@ -101,19 +101,31 @@ dependencies.
 at examples/example1.v.
 
 
+Architecture Documentation
+-------------------------
+
+📋 **[Comprehensive Architecture Documentation](docs/README.md)** with embedded Mermaid diagrams
+
+This repository now includes detailed architecture documentation with interactive diagrams that capture the recursive and emergent nature of the dL verification system:
+
+- **[System Architecture](docs/ARCHITECTURE.md)**: High-level overview with module interaction patterns
+- **[Module Dependencies](docs/MODULE_DEPENDENCIES.md)**: Detailed dependency graphs and data flows  
+- **[Cognitive Processing](docs/COGNITIVE_PROCESSING.md)**: Neural-symbolic integration patterns
+- **[Proof System](docs/PROOF_SYSTEM.md)**: Verification pipeline and sequent calculus architecture
+
 Roadmap
 -------
 
-
 This repository is organized into the following folders:
 
-1. coq-tools: a submodule containing some useful tactics
-2. syntax: syntax of Terms, Formulas, Hybrid Programs and ODEs
-3. semantics: static semantic, dynamic semantics as well as
+1. **coq-tools**: a submodule containing some useful tactics
+2. **syntax**: syntax of Terms, Formulas, Hybrid Programs and ODEs
+3. **semantics**: static semantic, dynamic semantics as well as
      soundness of static semantics (coincidence lemmas)
-4. substitution: uniform substitution and its
+4. **substitution**: uniform substitution and its
      correctness, as well as uniform and bound
      variable renaming
-5. axioms: DDL and ODE axioms
-6. checker: sequent calculus and proof checker
-6. examples: examples of proofs that use our proof checker
+5. **axioms**: DDL and ODE axioms
+6. **checker**: sequent calculus and proof checker
+7. **examples**: examples of proofs that use our proof checker
+8. **docs**: comprehensive architecture documentation with Mermaid diagrams
