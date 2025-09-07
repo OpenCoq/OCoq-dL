@@ -1,15 +1,26 @@
 Verification of KeYmaeraX's core in Coq
 =======================================
 
-
 This repository contains a formalization of KeYmaeraX's core in Coq.
 It includes a formalization of the syntax, dynamic semantics, and
 static semantics of Differential dynamic logic (dL), as well as a
 formalization of Uniform Substitution.  We have implemented (and
 verified the validity of) dL's Differential Dynamic Logic and ODE
 axioms.  We have also implemented a proof checker to write and check
-dL proofs in Coq.  Here are some useful links regarding this
-formalization:
+dL proofs in Coq.
+
+## 📚 Documentation
+
+**NEW**: Comprehensive technical architecture documentation is now available in the [`docs/`](docs/) directory:
+
+- **[Architecture Overview](docs/ARCHITECTURE.md)** - Complete system architecture with mermaid diagrams
+- **[Component Reference](docs/COMPONENTS.md)** - Detailed documentation of each module  
+- **[Usage Guide](docs/USAGE.md)** - Practical guide for writing proofs and using the system
+- **[Documentation Index](docs/index.md)** - Navigate all documentation
+
+## Research Papers
+
+Here are some useful links regarding this formalization:
 
 * We described our formalization in the following paper:
   [Formally verified differential dynamic logic](http://dx.doi.org/10.1145/3018610.3018616),
@@ -104,16 +115,30 @@ at examples/example1.v.
 Roadmap
 -------
 
-
 This repository is organized into the following folders:
 
-1. coq-tools: a submodule containing some useful tactics
-2. syntax: syntax of Terms, Formulas, Hybrid Programs and ODEs
-3. semantics: static semantic, dynamic semantics as well as
+1. **coq-tools**: a submodule containing some useful tactics
+2. **syntax**: syntax of Terms, Formulas, Hybrid Programs and ODEs
+3. **semantics**: static semantic, dynamic semantics as well as
      soundness of static semantics (coincidence lemmas)
-4. substitution: uniform substitution and its
+4. **substitution**: uniform substitution and its
      correctness, as well as uniform and bound
      variable renaming
-5. axioms: DDL and ODE axioms
-6. checker: sequent calculus and proof checker
-6. examples: examples of proofs that use our proof checker
+5. **axioms**: DDL and ODE axioms
+6. **checker**: sequent calculus and proof checker
+7. **examples**: examples of proofs that use our proof checker
+
+For detailed architecture information, see the [Architecture Documentation](docs/ARCHITECTURE.md).
+
+## Quick Start
+
+```bash
+# Generate Makefile and build the project
+./create_makefile.sh
+make -j 4
+
+# Verify examples work
+coqc examples/example1.v
+```
+
+For complete setup and usage instructions, see the [Usage Guide](docs/USAGE.md).
